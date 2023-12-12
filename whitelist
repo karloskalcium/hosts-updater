@@ -2,7 +2,7 @@
 tags.tiqcdn.com
 
 # tmobile - prepaid - error changing password
-# dpm.demdex.net
+dpm.demdex.net
 # for tmobile, try minimal hosts instead??
 
 # Nilfisk mailing list unsubscribe
@@ -12,3 +12,6 @@ www2.nilfisk.com
 # linked to kmails-lists.com
 static.klaviyo.com
 a.klaviyo.com
+
+# unblock newrelic
+newrelic.com
