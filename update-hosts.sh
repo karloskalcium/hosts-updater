@@ -3,11 +3,11 @@
 # from https://github.com/StevenBlack/hosts
 set -eou pipefail
 
-docker run --pull always -it -v /etc/hosts:/etc/hosts \
--v "/Users/kbrown/dev/util/host-updater/whitelist:/hosts/whitelist" \
--v "/Users/kbrown/dev/util/host-updater/hosts_output:/hosts/hosts_output" \
+docker run --pull always --rm -it -v /etc/hosts:/etc/hosts \
+-v "/Users/kbrown/dev/util/hosts-updater/whitelist:/hosts/whitelist" \
+-v "/Users/kbrown/dev/util/hosts-updater/hosts_output:/hosts/hosts_output" \
 ghcr.io/stevenblack/hosts:latest updateHostsFile.py --auto \
---output hosts_output --extensions fakenews --whitelist whitelist
+--output hosts_output --extensions fakenews gambling --whitelist whitelist
 
 echo "Done generating hosts file, now moving to /etc/hosts"
 sudo cp -f /private/etc/hosts "/private/etc/hosts.bak.$(date +%Y%m%d_%H%M%S)"
