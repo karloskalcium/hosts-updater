@@ -16,3 +16,6 @@ a.klaviyo.com
 # unblock newrelic
 newrelic.com
 clicks.eventbrite.com
+
+# for ADP
+app.pendo.io
